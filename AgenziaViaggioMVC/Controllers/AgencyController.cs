@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using AgenziaViaggioMVC.Database;
 using AgenziaViaggioMVC.Models;
-using System.Diagnostics;
 
 
 
@@ -15,10 +13,9 @@ namespace AgenziaViaggioMVC.Controllers
         {
             using (AgencyContext db = new AgencyContext())
             {
-                List<Trip> TripList = db.Trips.ToList<Trip>();
+                List<Trip> TripList = db.Trips.ToList();
                 return View("Index", TripList);
             }
-
-        }
+       }
     }
 }
