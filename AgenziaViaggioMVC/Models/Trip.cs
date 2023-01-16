@@ -17,6 +17,7 @@
         public string ImageUrl { get; set; }
 
         [Range(0, int.MaxValue)]
+        []
         public int DaysDuration { get; set; }
 
         [Range(0, int.MaxValue)]
