@@ -9,6 +9,7 @@
         public string Description { get; set; }
         [Url]
         [MaxLength(128)]
+        [EndsWith(".png", ".jpg", ".jpeg", ".webp")]
         public string ImageUrl { get; set; }
         [Range(0, int.MaxValue)]
         public int DaysDuration { get; set; }
