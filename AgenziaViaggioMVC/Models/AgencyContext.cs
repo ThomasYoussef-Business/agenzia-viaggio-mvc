@@ -1,5 +1,7 @@
 ﻿namespace AgenziaViaggioMVC.Models {
     public class AgencyContext : DbContext {
+        public DbSet<Trip> Trips { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
             optionsBuilder.UseSqlServer("Data Source=localhost;"
                                         + "Database=AgenziaViaggioMVC;"
