@@ -1,4 +1,8 @@
-﻿namespace AgenziaViaggioMVC.Database
+﻿using AgenziaViaggioMVC.Models;
+using Microsoft.EntityFrameworkCore;
+
+
+namespace AgenziaViaggioMVC.Database
 {
     public class AgencyContext : DbContext
     {
