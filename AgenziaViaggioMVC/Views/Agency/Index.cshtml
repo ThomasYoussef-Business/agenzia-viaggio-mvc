@@ -7,12 +7,12 @@
             <div class="card">
                 <img src="@trip.ImageUrl" class="card-img-top">
                 <div class="bg-info card-title">
-                    <h3 class="mt-2 mb-2">@trip.Title</h3>
+                    <h3 class="my-3 text-center">@trip.Title</h3>
                 </div>
-                <div class="card-body">
+                <div class="card-body text-center">
                     <p>@trip.Description</p>
                 </div>
-                <div class="card-footer bg-transparent">
+                <div class="card-footer bg-transparent text-center">
                     <h6 class="text-info">@trip.DaysDuration days - @trip.Destinations destinations</h6><br>
                     <h5 class="">€@trip.CostPerPerson<span class="text-muted">/person</span></h5>
                 </div>
@@ -22,17 +22,23 @@
 }
 
 <div class="container-fluid">
-    <div class="text-center mt-5 mb-5">
-        <h1>Our amazing tours</h1>
-        <p class="ms-5 me-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil tempora eveniet quas
-            velit non odit ipsa dicta deleniti recusandae omnis numquam iure quo, exercitationem atque a ut
-            repellendus iusto pariatur!
-        </p>
-        <div class="row g-3">
-            @foreach (Trip trip in Model) {
-                TripCard(trip);
-            }
+    <div class="row justify-content-center">
+        <div class="col-10 col-md-8 text-center my-5">
+            <h1>Our amazing tours</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil tempora eveniet quas
+                velit non odit ipsa dicta deleniti recusandae omnis numquam iure quo, exercitationem atque a ut
+                repellendus iusto pariatur!
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <div class="row g-3 gy-5 justify-content-evenly">
+                @foreach (Trip trip in Model) {
+                    TripCard(trip);
+                }
+            </div>
         </div>
     </div>
 </div>
