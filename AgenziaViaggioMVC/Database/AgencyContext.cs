@@ -1,4 +1,6 @@
-﻿namespace AgenziaViaggioMVC.Models {
+﻿using AgenziaViaggioMVC.Models;
+
+namespace AgenziaViaggioMVC.Database {
     public class AgencyContext : DbContext {
         public DbSet<Trip> Trips { get; set; }
 
